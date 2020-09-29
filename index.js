@@ -1,7 +1,7 @@
 const BDUSS = '' //**INPUT YOUR BDUSS HERE**
 const STOKEN = '' //**INPUT YOUR STOKEN HERE**
-const SVIPBDUSS = '' //**INPUT YOUR SVIP BDUSS HERE**
-const INDEX_URL = '' // Input your index url here
+const SVIPBDUSS = ''
+const INDEX_URL = 'https://pan.dotennin.ml/' // Input your index url here
 const AUTH_USER = '' //**INPUT BASIC AUTH USERNAME (optional)**
 const AUTH_PASS = '' //**INPUT BASIC AUTH SUPER SECRET PASSWORD (optional)**
 
@@ -232,26 +232,6 @@ height: 3em;
 </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
 <div class="container">
 <div class="col-lg-6 col-md-9 mx-auto mb-5 input-card">
 <div class="card">
@@ -311,114 +291,9 @@ const error = `
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-7 col-sm-8 col-11">`
-
-const previewHeader = `<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Ling Macker"/>
-<meta name="description" content="PanDownload网页版,百度网盘分享链接在线解析工具"/>
-<meta name="keywords" content="PanDownload,百度网盘,分享链接,下载,不限速"/>
-<link rel="icon" href="https://pandownload.com/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.staticfile.org/dplayer/1.26.0/DPlayer.min.js"></script>
-<style>
-  body {
-    background-image: url("https://pandownload.com/img/baiduwp/bg.png");
-  }
-
-  .logo-img {
-    width: 1.1em;
-    position: relative;
-    top: -3px;
-  }
-  #video{
-	max-width: 100%;
-  }
-</style>
-<meta name="referrer" content="never">
-<title>视频预览</title>
-<style>
-    .alert {
-      position: relative;
-      top: 3em;
-    }
-	.dplayer-logo {
-		pointer-events: none;
-		position: absolute;
-		left:auto;
-		right: 10px;
-		top: 10px;
-		max-width: 30px;
-		max-height: 30px;
-	}
-    .alert-heading {
-      height: 0.8em;
-    }
-  </style>
-<script>`
-
-const previewFooter = `</script>
-</head>
-<body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">	
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class="container-fluid" id="video">
-<div class="row justify-content-center">
-<div class="col-md-7 col-sm-8 col-11">
-<div class="alert alert-primary" role="alert">
-<h5 class="alert-heading">视频预览 with ❤ DPlayer</h5>
-<hr>
-<p class="card-text"><a href="./help">如无法播放请按照教程修改UA</a><br><div id="dplayer"></div></p>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>`
 
 const filebody = `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -450,7 +325,8 @@ const filebody = `<!DOCTYPE html>
 <title>文件列表</title>
 <script>
   function dl(fs_id, timestamp, sign, randsk, share_id, uk) {
-    var form = $('<form method="post" action="/download" target="_blank"></form>');
+    var form = $('<form method="get" action="/download" target="_blank"></form>');
+    // var form = $('<form method="post" action="https://spring-violet-cf67.google1.workers.dev/download" target="_blank"></form>');
     form.append('<input type="hidden" name="fs_id" value="'+fs_id+'">');
     form.append('<input type="hidden" name="time" value="'+timestamp+'">');
     form.append('<input type="hidden" name="sign" value="'+sign+'">');
@@ -458,6 +334,7 @@ const filebody = `<!DOCTYPE html>
     form.append('<input type="hidden" name="share_id" value="'+share_id+'">');
     form.append('<input type="hidden" name="uk" value="'+uk+'">');
     $(document.body).append(form);
+
     form.submit();
   }
   function video(fs_id, timestamp, sign, randsk, share_id, uk, filetype){
@@ -563,26 +440,6 @@ const filebody = `<!DOCTYPE html>
 </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
 <div class="container">
 <ol class="breadcrumb my-4">
 文件列表 </ol>
@@ -826,26 +683,6 @@ return true;
 </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
 <div class="container">
 <div class="col-lg-6 col-md-9 mx-auto mb-5 input-card">
 <div class="card">
@@ -909,26 +746,6 @@ const helpbody = `<!DOCTYPE html>
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-7 col-sm-8 col-11">`
@@ -1085,26 +902,7 @@ if(await getVer != null)
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="${INDEX_URL}">
-<img src="https://pandownload.com/img/baiduwp/logo.png" class="img-fluid rounded logo-img mr-2" alt="LOGO">PanDownload
-</a>
-<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collpase-bar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collpase-bar">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="${INDEX_URL}">主页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/TkzcM/baiduwp" target="_blank">GitHub</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
+
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-7 col-sm-8 col-11">`
@@ -1235,74 +1033,105 @@ else{
 }
 
 const download = async request => {
-  const form2 = await request.formData()
-  const fs_id = form2.get('fs_id')
-  const timestamp = form2.get('time')
-  const sign = form2.get('sign')
-  const randsk = form2.get('randsk')
-  const share_id = form2.get('share_id')
-  const uk = form2.get('uk')
-  async function getDlink(fs_id,timestamp,sign,randsk,share_id,uk){
-    var formData2 = new FormData()
-    formData2.append('encrypt',0)
-    formData2.append('extra','{"sekey":"'+decodeURIComponent(randsk)+'"}')
-    formData2.append('fid_list','['+fs_id+']')
-    formData2.append('primaryid',share_id)
-    formData2.append('uk',uk)
-    formData2.append('product','share')
-    formData2.append('type','nolimit')
-    const res3 = await fetch('https://pan.baidu.com/api/sharedownload?app_id=250528&channel=chunlei&clienttype=12&sign='+sign+'&timestamp='+timestamp+'&web=1',{
-      body:formData2,
-      headers:{
-        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.514.1919.810 Safari/537.36',
-        'Cookie':'BDUSS=' + BDUSS + ';'
-            +  'STOKEN=' + STOKEN + '; BDCLND=' + randsk
-      },
-      method:'POST'
+  const url = new URL(request.url)
+  const searchParams = url.searchParams
+
+  const fs_id = searchParams.get('fs_id')
+  const timestamp = searchParams.get('time')
+  const sign = searchParams.get('sign')
+  const randsk = searchParams.get('randsk')
+  const share_id = searchParams.get('share_id')
+  const uk = searchParams.get('uk')
+
+  const formData = {
+     fs_id, time: timestamp, sign, randsk, share_id, uk
+  }
+
+  const res = await fetch(
+      'https://spring-violet-cf67.google1.workers.dev/download',
+      {
+          "headers": {
+            "authority": 'spring-violet-cf67.google1.workers.dev',
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            "accept-language": "ja-JP,ja;q=0.9,zh-CN;q=0.8,zh;q=0.7,en-US;q=0.6,en;q=0.5",
+            "cache-control": "max-age=0",
+            "user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36',
+            'origin': 'spring-violet-cf67.google1.workers.dev',
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "upgrade-insecure-requests": "1",
+          },
+          body: searchParams.toString(),
+          method: 'POST',
       }
-    )
-    return JSON.parse(await res3.text())
+  )
+  const result = await res.text()
+  //return new Response(result, { headers: {'Content-Type': 'text/html;charset=UTF-8'} })
+  let realLink  = (/<a href="http:\/\/(.+?)".+>/).exec(result)[1]
+  //realLink = false
+  if (!realLink) {
+    async function getDlink(fs_id,timestamp,sign,randsk,share_id,uk){
+        var formData2 = new FormData()
+        formData2.append('encrypt',0)
+        formData2.append('extra','{"sekey":"'+decodeURIComponent(randsk)+'"}')
+        formData2.append('fid_list','['+fs_id+']')
+        formData2.append('primaryid',share_id)
+        formData2.append('uk',uk)
+        formData2.append('product','share')
+        formData2.append('type','nolimit')
+        const res3 = await fetch('https://pan.baidu.com/api/sharedownload?app_id=250528&channel=chunlei&clienttype=12&sign='+sign+'&timestamp='+timestamp+'&web=1',{
+        body:formData2,
+        headers:{
+            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.514.1919.810 Safari/537.36',
+            'Cookie':'BDUSS=' + BDUSS + ';'
+                +  'STOKEN=' + STOKEN + '; BDCLND=' + randsk
+        },
+        method:'POST'
+        }
+        )
+        return JSON.parse(await res3.text())
+    }
+    const json3 = await getDlink(fs_id,timestamp,sign,randsk,share_id,uk)
+    let dresult
+    if(json3.errno == 0){
+        const dlink = json3.list[0].dlink
+        const getRealLink = await fetch(dlink,{
+            headers:{
+            'user-agent': 'LogStatistic',
+            //'user-agent': 'netdisk;P2SP;2.2.60.26',
+            'Cookie': 'BDUSS=' + SVIPBDUSS + ';'
+            },
+            redirect:"manual"
+        })
+        const dldata = JSON.parse(await getRealLink.text())
+        if(dldata.error_code == 302){
+            realLink = getRealLink.headers.get('Location').substring(7)
+        }
+    }
   }
-  const json3 = await getDlink(fs_id,timestamp,sign,randsk,share_id,uk)
-  let dresult
-  if(json3.errno == 0){
-  const dlink = json3.list[0].dlink
-  const getRealLink = await fetch(dlink,{
-    headers:{
-      'user-agent': 'LogStatistic',
-      'Cookie': 'BDUSS=' + SVIPBDUSS + ';'
-    },
-    redirect:"manual"
-  })
-  const dldata = JSON.parse(await getRealLink.text())
-  if(dldata.error_code == 302){
-  const realLink = getRealLink.headers.get('Location').substring(7)
-  dresult = `<div class="alert alert-primary" role="alert">
-    <h5 class="alert-heading">获取下载链接成功</h5>
-    <hr>
-    <p class="card-text"><a id="http" href="http://`+realLink+`" target=_blank>下载链接(http)</a>
-    <a id="https" href="https://`+realLink+`" target=_blank>下载链接(https)</a>
-    <br><br>
-    <a href=javascript:void(0) data-toggle="modal" data-target="#exampleModal">推送到Aria2</a>
-    <br><br>
-    <a href="./help">下载链接使用方法（必读）</a></p>
-    </div>`
-  }
-  else{
-    dresult = `<div class="alert alert-danger" role="alert">
-    <h5 class="alert-heading">获取下载链接失败</h5>
-    <hr>
-    <p class="card-text">未知错误</p>
-    </div>`
-  }
-  }
-  else{
+  if (!realLink) {
       dresult = `<div class="alert alert-danger" role="alert">
-    <h5 class="alert-heading">获取下载链接失败</h5>
-    <hr>
-    <p class="card-text">未知错误</p>
-    </div>`
+        <h5 class="alert-heading">获取下载链接失败</h5>
+        <hr>
+        <p class="card-text">未知错误</p>
+        </div>`
+  } else {
+    dresult = `<div class="alert alert-primary" role="alert">
+        <h5 class="alert-heading">获取下载链接成功</h5>
+        <hr>
+        <p class="card-text"><a id="http" href="http://`+realLink+`" target=_blank>下载链接(http)</a>
+        <a id="https" href="https://`+realLink+`" target=_blank>下载链接(https)</a>
+        <br><br>
+        <a href=javascript:void(0) data-toggle="modal" data-target="#exampleModal">推送到Aria2</a>
+        <br><br>
+        <a href="./help">下载链接使用方法（必读）</a></p>
+        </div>`
   }
+
+
 
   return new Response(dbody+dresult+dfooter, { headers: {'Content-Type': 'text/html;charset=UTF-8'} })
 }
@@ -1322,6 +1151,9 @@ function parseAuthHeader(str) {
 async function handleRequest(request) {
   let response
   const { url, headers } = request
+  if(url.includes('download')){
+    return response = await download(request)
+  }
   if (AUTH_USER || AUTH_PASS) {
     const credentials = parseAuthHeader(headers.get('Authorization'))
     if (!credentials || credentials.user !== AUTH_USER || credentials.pass !== AUTH_PASS) {
@@ -1408,6 +1240,68 @@ async function handleRequest(request) {
   return response
 }
 
+
+/**
+ * Respond to the request
+ * @param {Request} request
+ */
+async function handleLinkRequest(link) {
+    try{
+        if (!link) throw new Error('link not found')
+        const response = await fetch(
+            "https://pan.naifei.cc/new/panshare.php",
+            {
+                "headers": {
+                    "accept": "application/json, text/javascript, */*; q=0.01",
+                    "accept-language": "ja-JP,ja;q=0.9,zh-CN;q=0.8,zh;q=0.7,en-US;q=0.6,en;q=0.5",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-site": "same-origin",
+                    "x-requested-with": "XMLHttpRequest",
+                    "cookie": "__cfduid=ddda8643c0ab30466db6b425cc09a17ee1595494800; _ga=GA1.2.763380005.1595761218"
+                },
+                "body": `link=${link}&sign=wQSEErCQGZTJ5ZFFZDVkPg%3D%3D`,
+                "method": "POST",
+                "host": 'pan.naifei.cc'
+            }
+        )
+        const res = (await response.json()).datas
+        if (!res) throw new Error('data not found')
+        // datas.forEach(data => {
+        //     data.link = data.dlink.replace(/.+href="(.*?)".+/g, '$1')
+        //     delete data.dlink
+        // })
+        const downlink = res.downlink.map((data) => {
+            return {
+                ...data,
+                link: data.link.replace(/.+href="(.*?)".+/g, '$1'),
+                dlink: data.link,
+                server_filename: data.name
+            }
+        })
+
+        return new Response(JSON.stringify(downlink), {status: 200, headers: getHeaders()})
+    } catch (e) {
+        return new Response(e.message, {status: 404, headers: getHeaders()})
+    }
+
+}
+
+function getHeaders() {
+    const headers = new Headers()
+    headers.set('Access-Control-Allow-Origin', '*')
+    headers.set('Access-Control-Allow-Headers', '*')
+    headers.set('content-type', 'application/json')
+    return headers
+}
+
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
+    const url = new URL(event.request.url)
+    const link = url.searchParams.get('link') // Naifei link
+    if (link) {
+        event.respondWith(handleLinkRequest(link))
+    } else {
+        event.respondWith(handleRequest(event.request))
+    }
 })
